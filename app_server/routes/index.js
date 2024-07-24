@@ -15,5 +15,5 @@ router.get('/location/review', function(req, res, next) {
 router.get('/about', function(req, res, next) {
   res.render('index', { title: 'about' });
 });
-
+//exports command//
 module.exports = router;
