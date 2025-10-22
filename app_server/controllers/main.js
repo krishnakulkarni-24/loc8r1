@@ -5,3 +5,6 @@ module.exports.index=function(req,res){
 module.exports.signin=function(req,res){
     res.render('signin', { title: 'Eeshanth Reyhanth' });
 };
+module.exports.review=function(req,res){
+    res.render('review', { title: 'Eeshanth Reyhanth' });
+};
