@@ -8,12 +8,12 @@ router.get('/', ctrlLocations.homelist);
 router.get('/locations', ctrlLocations.locationInfo); 
 router.get('/location1', ctrlLocations.locationInfo1); 
 router.get('/location2', ctrlLocations.locationInfo2); 
-router.get('/review', ctrlLocations.addReview); 
+router.get('/review', ctrlLocations.addReview);
+router.post('/review', ctrlLocations.doAddReview);
  
 router.get('/about', ctrlothers.about); 
  
-router.get('/signin', ctrlmain.signin) 
-router.get('/review', ctrlmain.review) 
+router.get('/signin', ctrlmain.signin); 
 router.get('/register', function(req, res, next) { 
         res.render('register', { title: 'register' }); 
     }); 

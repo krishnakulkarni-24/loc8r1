@@ -39,5 +39,17 @@ module.exports.locationInfo2 = function(req, res){
 module.exports.addReview = function(req, res){
     res.render('locations-review-form', { title: 'ADD REVIEW' });
   };
+
+module.exports.doAddReview = function(req, res){
+    // Handle the review submission
+    const reviewData = {
+        name: req.body.name,
+        rating: req.body.rating,
+        review: req.body.review
+    };
+    console.log('Review submitted:', reviewData);
+    // Redirect back to locations page or show success
+    res.redirect('/locations?name=' + req.body.name + '&rating=' + req.body.rating + '&review=' + req.body.review);
+  };
   
   
