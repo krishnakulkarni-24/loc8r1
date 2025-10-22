@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-//var dbURI = "mongodb+srv://archanaai:archanaai@cluster0.twow8.mongodb.net/loc8r";
- const dbURI="mongodb://localhost:27017/loc8r";
+// Use MongoDB Atlas for production, local for development
+const dbURI = process.env.MONGODB_URI || "mongodb://localhost:27017/loc8r";
 mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', () => {
