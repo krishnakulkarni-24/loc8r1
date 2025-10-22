@@ -13,10 +13,10 @@ router.post('/review', ctrlLocations.doAddReview);
  
 router.get('/about', ctrlothers.about); 
  
-router.get('/signin', ctrlmain.signin); 
-router.get('/register', function(req, res, next) { 
-        res.render('register', { title: 'register' }); 
-    }); 
+router.get('/signin', ctrlmain.signin);
+router.post('/signin', ctrlmain.doSignin);
+router.get('/register', ctrlmain.register);
+router.post('/register', ctrlmain.doRegister);
   
    
 module.exports = router;

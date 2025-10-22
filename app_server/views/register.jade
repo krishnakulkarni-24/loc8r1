@@ -5,17 +5,21 @@ block content
   .container
     h1 Register now
     p.lead
-      | Sign in with your account. Don't have one?
-      a(href='/register') Register Now.
-    .form-group
-      label(for='username') Username
-      input.form-control(type='text', id='username', name='username', placeholder='Enter a username')
-    .form-group
-      label(for='password') Password
-      input.form-control(type='password', id='password', name='password', placeholder='Enter a password')
-    .form-group
-      label(for='password') Confirm Password
-      input.form-control(type='password', id='password', name='password', placeholder='Enter a password again')
-    button.btn.btn-primary(type='submit') Submit
-    &nbsp;
-    a.btn.btn-default(role='button', href='/') Cancel
+      | Create your account. Already have one?
+      a(href='/signin') Sign in here.
+    form(action="/register", method="post", role="form")
+      .form-group
+        label(for='username') Username
+        input.form-control(type='text', id='username', name='username', placeholder='Enter a username', required)
+      .form-group
+        label(for='email') Email
+        input.form-control(type='email', id='email', name='email', placeholder='Enter your email', required)
+      .form-group
+        label(for='password') Password
+        input.form-control(type='password', id='password', name='password', placeholder='Enter a password', required)
+      .form-group
+        label(for='confirmPassword') Confirm Password
+        input.form-control(type='password', id='confirmPassword', name='confirmPassword', placeholder='Enter a password again', required)
+      button.btn.btn-primary(type='submit') Register
+      &nbsp;
+      a.btn.btn-default(role='button', href='/') Cancel
